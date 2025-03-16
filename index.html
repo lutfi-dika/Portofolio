@@ -10,35 +10,38 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
     <link rel="stylesheet" href="style.css">
     <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 </head>
 </head>
 <body>
    <div class="parallax home">
     <nav class="navbar">
-        <div class="logo">Portofolio</div>
+        <div class="logo">My Portofolio</div>
         <div class="menu-toggle" id="mobile-menu">
             <span class="bar"></span>
             <span class="bar"></span>
             <span class="bar"></span>
         </div>
         <ul class="nav-list">
-            <li><a href="#tentang">Home</a></li>
-            <li><a href="#About">About</a></li>
-            <li><a href="#Portofolio">Portofolio</a></li>
-            <li><a href="#skill-1">Skill</a></li>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#contact">Contact</a></li>
         </ul>
     </nav>
-     <script>
-        const mobileMenu = document.getElementById('mobile-menu');
-const navList = document.querySelector('.nav-list');
+    <script>
 
-mobileMenu.addEventListener('click', () => {
-    navList.classList.toggle('active');
-});
-     </script>
+        const mobileMenu = document.getElementById('mobile-menu');
+    const navList = document.querySelector('.nav-list');
+    
+    mobileMenu.addEventListener('click', () => {
+        navList.classList.toggle('active');
+    });
+
+    </script>
      <section id="tentang">
       <div class="container">
-        <div class="text">
+        <div class="text" data-aos="fade-up"  data-aos-duration="3000">
 
             <h2>welcome to my portfolio website</h2>
 
@@ -50,7 +53,7 @@ mobileMenu.addEventListener('click', () => {
    <!-- about -->
    <div class="parallax About">
     <section id="About" class="About">
-    <section id="home">
+    <section id="home" data-aos="fade-right"  data-aos-duration="4000">
         <div class="leftHome">
             <h2> my portfolio </h2>
             <p class="desc">
@@ -69,43 +72,69 @@ mobileMenu.addEventListener('click', () => {
 <!-- parallex portofolio -->
    <div class="parallex portofolio">
     <section id="Portofolio">
-    <div class="container-text">
-     <h2>portofolio</h2>
-    </div>
-    <div class="dashboard">
-        <div class="color-box">
-            <div class="box skyblue">
-                <p><i class="thumbs-up"></i> </p>
-                <p>Berita Digital</p>
-               <button><a href="https://lutfi-dika.github.io/lomba-website/">silahkan</a></button>
+        <div class="container-text">
+            <h2>Portofolio</h2>
+        </div>
+<div class="portofolio-card">
+   
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
+            <div class="service-card bg-white rounded-xl p-6" data-aos="fade-up" data-aos-duration="400">
+                <div class="service-icon w-12 h-12 rounded-full flex items-center justify-center mb-4">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-blue-700">
+                        <path d="M12 19V5M5 12l7-7 7 7"/>
+                    </svg>
+                </div>
+                <h3 class="text-lg font-semibold mb-2">Berita Digital</h3>
+                <p class="text-gray-600 mb-4">Berita Digital website lomba website yang bertema Pendidikan</p>
+                <button class="text-blue-600 font-semibold hover:text-blue-800"><a href="https://lutfi-dika.github.io/lomba-website/">Next</a></button>
             </div>
-            <div class="box yellow">
-                <p><i class="comment"></i></p>
-                <p>Ibadah Ramadhan</p>
-                <button><a href="https://lutfi-dika.github.io/ibadah-ramadhan/">silahkan</a></button>
-              
+
+           
+            <div class="service-card bg-white rounded-xl p-6" data-aos="fade-up" data-aos-duration="600">
+                <div class="service-icon w-12 h-12 rounded-full flex items-center justify-center mb-4">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-blue-700">
+                        <rect x="3" y="4" width="18" height="18" rx="2" ry="2"/>
+                        <line x1="16" y1="2" x2="16" y2="6"/>
+                        <line x1="8" y1="2" x2="8" y2="6"/>
+                        <line x1="3" y1="10" x2="21" y2="10"/>
+                    </svg>
+                </div>
+                <h3 class="text-lg font-semibold mb-2">ibadah-ramadhan</h3>
+                <p class="text-gray-600 mb-4">Ibadah Ramadhan adalah website untuk memberi informasi tengan Ramadhan</p>
+                <button class="text-blue-600 font-semibold hover:text-blue-800"><a href="https://lutfi-dika.github.io/ibadah-ramadhan/">Next</a></button>
             </div>
-            <div class="box purple">
-                <p> <i class="share"></i> </p>
-                <p> dashboard admin BSI </p>
-                <button><a href="https://lutfi-dika.github.io/-website-dashbord/">silahkan</a></button>
+
+            
+            <div class="service-card bg-white rounded-xl p-6" data-aos="fade-up" data-aos-duration="900">
+                <div class="service-icon w-12 h-12 rounded-full flex items-center justify-center mb-4">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-blue-700">
+                        <path d="M12 20V10"/>
+                        <path d="M18 20V4"/>
+                        <path d="M6 20v-4"/>
+                    </svg>
+                </div>
+                <h3 class="text-lg font-semibold mb-2">Dashboard Admin Pareto ormas BSI</h3>
+                <p class="text-gray-600 mb-4">Website ini berisi tentang pareta ormas</p>
+                <button class="text-blue-600 font-semibold hover:text-blue-800">Next</button>
             </div>
         </div>
+
+                           
+        </div>
     </div>
+</div>
     </section>
    
 </div>
 <!-- parallax skill -->
 <div class="parallax skill">
     <section id="skill-1">
- <div class="container-skill">
-    <h2>Skill</h2>
- </div>
  <section id="skill">
  <section class="text-center py-16" class="container-card">
+    <h2 class="text-2xl font-bold mb-6">skill</h2>
     <div class="container mx-auto px-4">
         <div class="flex flex-wrap justify-center">
-            <div class="w-full md:w-1/3 p-4">
+            <div class="w-full md:w-1/3 p-4" data-aos="zoom-in-up" data-aos-duration="500">
                 <div class="bg-white rounded-lg shadow-lg p-6">
                     <div class="bg-purple-100 rounded-full w-12 h-12 flex items-center justify-center mx-auto mb-4">
                         <i class="fas fa-crown text-purple-500"></i>
@@ -114,7 +143,7 @@ mobileMenu.addEventListener('click', () => {
                     <p class="text-gray-600">Dan kami juga ada layanan sosial media management untuk costamer</p>
                 </div>
             </div>
-            <div class="w-full md:w-1/3 p-4">
+            <div class="w-full md:w-1/3 p-4" data-aos="zoom-in-up" data-aos-duration="800">
                 <div class="bg-white rounded-lg shadow-lg p-6">
                     <div class="bg-purple-100 rounded-full w-12 h-12 flex items-center justify-center mx-auto mb-4">
                         <i class="fas fa-project-diagram text-purple-500"></i>
@@ -123,7 +152,7 @@ mobileMenu.addEventListener('click', () => {
                     <p class="text-gray-600">Selain itu saya juga bisa membuat desain poster digital yang menarik  </p>
                 </div>
             </div>
-            <div class="w-full md:w-1/3 p-4">
+            <div class="w-full md:w-1/3 p-4" data-aos="zoom-in-up" data-aos-duration="1000">
                 <div class="bg-white rounded-lg shadow-lg p-6">
                     <div class="bg-purple-100 rounded-full w-12 h-12 flex items-center justify-center mx-auto mb-4">
                         <i class="fas fa-globe text-purple-500"></i>
@@ -138,12 +167,18 @@ mobileMenu.addEventListener('click', () => {
    </section>
   </section>
 </div>
+<section class="cta">
+    <div class="container">
+      <h2 class="text-white" data-aos="zoom-in-down" data-aos-duration="400">Terima kasih telah mengunjungi portofolio saya.</h2>
+      <p data-aos="zoom-in-down" data-aos-duration="800">"Itu dia sekilas tentang saya dan karya-karya saya!</p>
+    
+    </div>
+  </section>
+  
 <div class="garis-tengah">
     <!-- <span class="teks-tengah">Pendidikan itu apasih???</span> -->
   </div>
-<!-- <div class="relative">
-    <img alt="School building with banners and posters" class="w-full h-auto" height="1080" src="logo jpg.jpg" width="1920"/>
-   </div> -->
+   </div> 
    <!-- Footer -->
    <footer class="bg-gray-300 text-white py-8">
     <div class="container mx-auto px-4">
@@ -163,15 +198,15 @@ mobileMenu.addEventListener('click', () => {
         Social Media
        </h2>
        <div class="flex justify-center space-x-4 mb-4">
-        <a class="text-black text-2xl" href="#">
+        <a class="text-black text-2xl" href="#" data-aos="zoom-in-down" data-aos-duration="200">
          <i class="fab fa-tiktok">
          </i>
         </a>
-        <a class="text-black text-2xl" href="#">
+        <a class="text-black text-2xl" href="#" data-aos="zoom-in-down" data-aos-duration="400">
          <i class="fab fa-instagram">
          </i>
         </a>
-        <a class="text-black text-2xl" href="#">
+        <a class="text-black text-2xl" href="#" data-aos="zoom-in-down" data-aos-duration="800">
          <i class="fab fa-github">
          </i>
         </a>
@@ -193,4 +228,8 @@ mobileMenu.addEventListener('click', () => {
    </footer>
  
 </body>
+<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+<script>
+  AOS.init();
+</script>
 </html>
