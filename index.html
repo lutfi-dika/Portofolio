@@ -9,6 +9,9 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" media="screen and (max-width: 821px)" href="responsive.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
     <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 </head>
@@ -16,7 +19,7 @@
 <body >
    <div class="parallax home">
     <nav class="navbar">
-        <div class="logo" id="text"></div>
+        <div class="logo" id="text"  data-aos-duration="5000"></div>
         <script>
                const text = "my portfolio";
         let index = 0;
@@ -40,7 +43,9 @@
             <li><a href="#tentang">Home</a></li>
             <li><a href="#About">About</a></li>
             <li><a href="#portofolio">Portofolio</a></li>
-            <li><a href="#skill-1">skill</a></li>
+            <li><a href="#skill">Portofolio</a></li>
+            <li><a href="#service">service</a></li>
+            <li><a href="#contact">Portofolio</a></li>
         </ul>
     </nav>
     <script>
@@ -87,7 +92,7 @@
    <div class="parallex portofolio">
     <section id="Portofolio">
         <div class="container-text">
-            <h2>Portofolio</h2>
+            <h2 class="text-5xl">Portofolio</h2>
         </div>
 <div class="portofolio-card">
    
@@ -140,12 +145,85 @@
     </section>
    
 </div>
+
+<div class="parallax keterampilan">
+    <section id="skill">
+    <h2 class="text-center text-black text-5xl">skill</h2>
+    <section id="skills" class="skill">
+        <div class="skill-container">
+            <div class="skill-card" ata-aos="fade-down" data-aos-duration="400">
+                <div class="skill-name">HTML</div>
+                <div class="skill-bar">
+                    <div class="skill-fill" style="width: 90%;">90%</div>
+                </div>
+            </div>
+            
+            <div class="skill-card" ata-aos="fade-down" data-aos-duration="800">
+                <div class="skill-name">CSS</div>
+                <div class="skill-bar">
+                    <div class="skill-fill" style="width: 80%;">80%</div>
+                </div>
+            </div>
+            
+            <div class="skill-card" ata-aos="fade-down" data-aos-duration="1000">
+                <div class="skill-name">JavaScript</div>
+                <div class="skill-bar">
+                    <div class="skill-fill" style="width: 50%;">50%</div>
+                </div>
+            </div>
+
+            <div class="skill-card" ata-aos="fade-down" data-aos-duration="1200">
+                <div class="skill-name">Boostrap</div>
+                <div class="skill-bar">
+                    <div class="skill-fill" style="width: 60%;">60%</div>
+                </div>
+
+                    <div class="skill-card" ata-aos="fade-down" data-aos-duration="1400">
+                        <div class="skill-name">tailwindcss</div>
+                        <div class="skill-bar">
+                            <div class="skill-fill" style="width: 30%;">30%</div>
+                        </div>
+                    </div>
+
+                    <div class="skill-card" ata-aos="fade-down" data-aos-duration="1600">
+                        <div class="skill-name">Geekshelp</div>
+                        <div class="skill-bar">
+                            <div class="skill-fill" style="width: 50%;">50%</div>
+                        </div>
+                    </div>
+
+                    <div class="skill-card" ata-aos="fade-down" data-aos-duration="1800">
+                        <div class="skill-name">AI</div>
+                        <div class="skill-bar">
+                            <div class="skill-fill" style="width: 40%;">40%</div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <script>
+            document.addEventListener("DOMContentLoaded", function() {
+                let skills = document.querySelectorAll(".skill-fill");
+                skills.forEach(skill => {
+                    let width = skill.style.width;
+                    skill.style.width = "0";
+                    setTimeout(() => {
+                        skill.style.transition = "width 1.5s ease-in-out";
+                        skill.style.width = width;
+                    }, 300);
+                });
+            });
+        </script>
+    </section>
+</div>
+
 <!-- parallax skill -->
-<div class="parallax skill">
-    <section id="skill-1">
- <section id="skill">
- <section class="text-center py-16" class="container-card">
-    <h2 class="text-2xl font-bold mb-6">skill</h2>
+<div class="parallas service">
+ <section id="service" class="services">
+     <section class="text-center py-16" class="container-card">
+         <h2 class="text-5xl font-bold mb-6">service</h2>
+         <section id="sederhana" class="layanan-services">
     <div class="container mx-auto px-4" >
         <div class="flex flex-wrap justify-center">
             <div class="w-full md:w-1/3 p-4" data-aos="zoom-in-up" data-aos-duration="500">
@@ -181,6 +259,74 @@
    </section>
   </section>
 </div>
+
+
+<!-- contact -->
+ <div class="parallax contact">
+    <section id="contact">
+      <h2 class="text-center text-5xl ">contact</h2>
+       <div class="main-container">
+        <div class="cards">
+            <div class="card card1" data-aos="zoom-in-up" data-aos-duration="500">
+                <div>
+                    <ul>
+                        <li><i class="fa-solid fa-star"></i></li>
+                        <li><i class="fa-solid fa-star"></i></li>
+                        <li><i class="fa-solid fa-star"></i></li>
+                        <li><i class="fa-solid fa-star"></i></li>
+                        <li><i class="fa-solid fa-star"></i></li>
+                    </ul>
+                </div>
+                <p class="close"><i class="fa-solid fa-xmark"></i></p>
+                <p class="desc text-5xl">Home</p>
+                <p class="read-more">
+                    <a class="readMore" >Bekasi-tambun selatan-indonesia</a>
+                </p>
+            </div>
+
+            <div class="card card2" data-aos="zoom-in-up" data-aos-duration="1000">
+                <div>
+                    <ul>
+                        <li><i class="fa-solid fa-star"></i></li>
+                        <li><i class="fa-solid fa-star"></i></li>
+                        <li><i class="fa-solid fa-star"></i></li>
+                        <li><i class="fa-solid fa-star"></i></li>
+                        <li><i class="fa-solid fa-star"></i></li>
+                    </ul>
+                </div>
+                <p class="close"><i class="fa-solid fa-xmark"></i></p>
+                <p class="desc text-5xl">Phone Number</p>
+                <p class="read-more">
+                    <a class="readMore">62-812-9543-1853</a>
+                </p>
+            </div>
+
+            <div class="card card3 " data-aos="zoom-in-up" data-aos-duration="1500">
+                <div>
+                    <ul>
+                        <li><i class="fa-solid fa-star"></i></li>
+                        <li><i class="fa-solid fa-star"></i></li>
+                        <li><i class="fa-solid fa-star"></i></li>
+                        <li><i class="fa-solid fa-star"></i></li>
+                        <li><i class="fa-solid fa-star"></i></li>
+                    </ul>
+                </div>
+                <p class="close"><i class="fa-solid fa-xmark"></i></p>
+                <p class="desc text-5xl">Email Adres</p>
+                <p class="read-more">
+                    <a class="readMore">Lutfiandika33@gmail.com</a>
+                </p>
+               </div>
+            </div>
+        </div>
+    </section> 
+
+   
+</div>
+
+
+
+
 <section class="cta">
     <div class="container">
       <h2 class="text-white" data-aos="zoom-in-down" data-aos-duration="400">Terima kasih telah mengunjungi portofolio saya.</h2>
