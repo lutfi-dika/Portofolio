@@ -69,7 +69,7 @@ body {
   margin: 3px 0;
 } 
 
-/* Responsive Styles */
+/* Responsive Styles  */
 @media (max-width: 768px) {
   .nav-list {
       display: none;
@@ -225,7 +225,7 @@ body {
 
 .portofolio{
   background-image: url('a7c4b42e3d72cc0279bda59509976491.jpg');
- height: 154vh;
+ height: 167vh;
 }
 
 .container-text{
