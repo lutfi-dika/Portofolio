@@ -252,6 +252,8 @@ body {
   height: 85vh;
 }
 
+/*  */
+
 .service-card {
   transition: all 0.3s ease;
   border: 1px solid #e2e8f0;
@@ -351,6 +353,7 @@ body {
 }
 
 
+
 /* Skills */
 .skill {
   margin-top: 3rem;
@@ -396,7 +399,6 @@ body {
   border-radius: 5px;
 }
 
-
 /* Service */
 .parallas {
   width: 100%;
@@ -408,7 +410,7 @@ body {
 
 .service{
   background-image: url('bff61f74569c33ea953ef5e780506fb9.jpg');
-  height: 185vh;
+  height: 154vh;
 }
 
 
@@ -419,15 +421,12 @@ body {
   height: 130vh;
 }
 
-
-
 .container-skill{
   font-family: 'Times New Roman', Times, serif;
   font-size: 2rem;
   text-align: center;
 
 }
-
 
 /* CTA Section */
 .cta {
